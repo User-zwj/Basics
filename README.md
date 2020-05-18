@@ -1,5 +1,6 @@
 # Basics
 
+## C, C++ 
 GCC stands for GNU compiler collection.
 
 ---
