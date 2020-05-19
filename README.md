@@ -24,3 +24,12 @@ GCC stands for GNU compiler collection.
 
 `./file`                 #execute the c++ file
 
+## makefile
+`cd myproject`
+
+`make`                   #compile all binary
+
+`make clean`             #remove all binaries andobjects
+
+`make target_name`
+
