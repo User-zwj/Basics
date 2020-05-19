@@ -33,3 +33,11 @@ GCC stands for GNU compiler collection.
 
 `make target_name`
 
+## Bash
+`cd ..`
+
+`touch myscript.sh`      #create a bash file
+
+`chmod +x myscript.sh`   #make the bash file executable
+
+`./myscript.sh`          #execture the bash file
