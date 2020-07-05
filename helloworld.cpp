@@ -141,32 +141,87 @@
 
 
 
-// declaring functions prototypes
-#include <iostream>
-using namespace std;
+// // declaring functions prototypes
+// #include <iostream>
+// using namespace std;
+//
+// void odd (int a);
+// void even (int a);
+//
+// int main ()
+// {
+//   int i;
+//   do {
+//     cout << "Type a number (0 to exit): ";
+//     cin >> i;
+//     odd (i);
+//   } while (i!=0);
+//   return 0;
+// }
+//
+// void odd (int a)
+// {
+//   if ((a%2)!=0) cout << "Number is odd.\n";
+//   else even (a);
+// }
+//
+// void even (int a)
+// {
+//   if ((a%2)==0) cout << "Number is even.\n";
+//   else odd (a);
+// }
 
-void odd (int a);
-void even (int a);
 
-int main ()
+
+// #include <iostream>
+// #include <cstdio>
+//
+// using namespace std;
+//
+// int main()
+// {
+//     int count = 10;
+//     char str[10];
+//     FILE* fp;
+//
+//     fp = fopen("file.txt","w+");
+//     fputs("An example file\n", fp);
+//     fputs("Filename is file.txt\n", fp);
+//
+//     rewind(fp);
+//
+//     while(feof(fp) == 0)
+//     {
+//         fgets(str,count,fp);
+//         cout << str << endl;
+//     }
+//
+//     fclose(fp);
+//     return 0;
+// }
+
+
+
+#include <cstdio>
+#include <cstring>
+
+int main()
 {
-  int i;
-  do {
-    cout << "Type a number (0 to exit): ";
-    cin >> i;
-    odd (i);
-  } while (i!=0);
-  return 0;
-}
+    char str[] = "Hello programmers";
+    FILE *fp;
 
-void odd (int a)
-{
-  if ((a%2)!=0) cout << "Number is odd.\n";
-  else even (a);
-}
+    fp = fopen("file.txt","w");
 
-void even (int a)
-{
-  if ((a%2)==0) cout << "Number is even.\n";
-  else odd (a);
+    if (fp)
+    {
+        for(int i=0; i<strlen(str); i++)
+        {
+            fputc(str[i],fp);
+        }
+    }
+    else
+        perror("File opening failed");
+
+    fclose(fp);
+    return 0;
 }
